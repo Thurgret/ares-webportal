@@ -34,6 +34,10 @@ export default Component.extend({
       let pcRollName = this.pcRollName;
       let modifierString = this.modifierString;
       let favouredString = this.favouredString;
+
+      if (favouredString == null){
+        favouredString = "n"
+      }
       
       var sender;
       if (this.scene) {
@@ -55,6 +59,8 @@ export default Component.extend({
       this.set('rollString', null);
       this.set('pcRollSkill', null);
       this.set('pcRollName', null);
+      this.set('favouredString', null);
+      this.set('modifierString', null);
 
       var destinationId, command;
       if (this.destinationType == 'scene') {
