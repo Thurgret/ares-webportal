@@ -36,7 +36,7 @@ export default Component.extend({
         sender = this.get('scene.poseChar.name');
       }
         
-      if (!rollString && !vsRoll1 && !pcRollSkill) {
+      if (!rollString && !pcRollSkill) {
         this.flashMessages.danger("You haven't selected an ability to roll.");
         return;
       }
