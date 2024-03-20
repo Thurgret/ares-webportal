@@ -1,10 +1,3 @@
 <li><a href="#" {{action (mut this.selectSkillRoll) true}} class="dropdown-item">Roll Ability</a></li>
-<li><a href="#" {{action (mut this.selectSpendLuck) true}} class="dropdown-item">Spend Luck</a></li>
 
-<BsModalSimple @title="Spend a Luck Point" @closeTitle="Cancel" @submitTitle="Spend" @size={{null}} @fade={{true}} @open={{this.selectSpendLuck}} @onHide={{action (mut this.selectSpendLuck) false}}>
-  
-  <b>Reason:</b> <Input @type="text" size={{25}} id="luckReason"  @value={{this.luckReason}} />
 
-</BsModalSimple>
-
-<TorRoll @scene={{this.scene}} @destinationType="scene" @abilities={{this.abilities}} @selectSkillRoll={{this.selectSkillRoll}} />
