@@ -1,6 +1,6 @@
 <BsModalSimple @title="Add Ability Roll" @closeTitle="Cancel" @submitTitle="Roll" @size={{null}} @fade={{true}} @open={{this.selectSkillRoll}} @onSubmit={{action "addRoll"}} @onHide={{action (mut this.selectSkillRoll) false}}>
 
-    <p class="hint">You can use a rating number to roll for a NPC. An average attribute is automatically factored in, so rolling a skill of "3" will roll 5 dice total for the NPC.</p>
+    <p class="hint">Modifiers to rolls should be added in the second row. If a roll is favoured, type F in the favoured box, and if it is ill-favoured, type I.</p>
     
 
     <p><b>Regular Roll</b></p>
@@ -13,8 +13,8 @@
     <Input @type="text" size={{25}} id="rollString" @enter={{action "addRoll"}} @value={{this.rollString}} />
 
     <hr>
-    <p>Modifiers: <Input @type="text" size={{5}} id="modifierString" @enter={{action "addRoll"}} @value={{this.modifierString}} />
-    Favoured or Ill-favoured: <Input @type="text" size={{5}} id="favouredString" @enter={{action "addRoll"}} @value={{this.favouredString}} /></p>
+    <p>Modifiers: <Input @type="text" size={{2}} id="modifierString" @enter={{action "addRoll"}} @value={{this.modifierString}} />
+    Favoured or Ill-favoured: <Input @type="text" size={{2}} id="favouredString" @enter={{action "addRoll"}} @value={{this.favouredString}} /></p>
    <hr>
     <p><b>Roll for Another PC</b></p>
     
