@@ -1,8 +1,7 @@
 <li><a href="#" {{action (mut this.selectSkillRoll) true}} class="dropdown-item">Roll Ability</a></li>
 
 
-
-<TorRoll @scene={{this.scene}} @destinationType="scene" @abilities={{this.abilities}} @selectSkillRoll={{this.selectSkillRoll}} />
+<TestName @scene={{this.scene}} @destinationType="scene" @abilities={{this.abilities}} @selectSkillRoll={{this.selectSkillRoll}} />
 
 
 <BsModalSimple @title="Add Ability Roll" @closeTitle="Cancel" @submitTitle="Roll" @size={{null}} @fade={{true}} @open={{this.selectSkillRoll}} @onSubmit={{action "addRoll"}} @onHide={{action (mut this.selectSkillRoll) false}}>
