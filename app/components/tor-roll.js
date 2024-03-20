@@ -10,6 +10,8 @@ export default Component.extend({
   pcRollSkill: null,
   pcRollName: null,
   rollString: null,
+  modifierString: null,
+  favouredString: null,
   destinationType: 'scene',
 
   didInsertElement: function() {
@@ -30,6 +32,8 @@ export default Component.extend({
       let rollString = this.rollString || defaultAbility;
       let pcRollSkill = this.pcRollSkill;
       let pcRollName = this.pcRollName;
+      let modifierString = this.modifierString;
+      let favouredString = this.favouredString;
       
       var sender;
       if (this.scene) {
@@ -66,6 +70,8 @@ export default Component.extend({
          roll_string: rollString,
          pc_name: pcRollName,
          pc_skill: pcRollSkill,
+         favoured_string: favouredString,
+         modifier_string: modifierString,
          sender: sender }, null)
       .then( (response) => {
         if (response.error) {
