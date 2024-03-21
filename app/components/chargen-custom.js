@@ -17,7 +17,7 @@ export default Component.extend({
     this.char.custom.attributeoption = this.attributeString
     return {
 
-      attributeoption: this.char.custom.attributeoption
+      attributeoption: this.get('char.custom.attributeoption')
 
     }
     // Return a hash containing your data.  Character data will be in 'char'.  For example:
