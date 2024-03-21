@@ -14,6 +14,11 @@ export default Component.extend({
   },
 
   onUpdate: function() {
+    return {
+
+      attributeoption: attributeString
+
+    }
     // Return a hash containing your data.  Character data will be in 'char'.  For example:
     // 
     // return { goals: this.get('char.custom.goals') };
