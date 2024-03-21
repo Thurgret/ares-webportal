@@ -14,7 +14,7 @@ export default Component.extend({
   },
 
   onUpdate: function() {
-    let attributeString = this.attributeString
+    this.char.custom.attributeoption = this.attributeString
     return {
 
       attributeoption: attributeString
