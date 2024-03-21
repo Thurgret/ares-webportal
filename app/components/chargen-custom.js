@@ -14,8 +14,8 @@ export default Component.extend({
   },
 
   onUpdate: function() {
+    this.char.custom.attributeoption = this.attributeString
 
-    this.char.custom.attributeoption = "2"
     return {
 
       attributeoption: this.get('char.custom.attributeoption')
