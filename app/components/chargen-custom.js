@@ -6,6 +6,8 @@ import RSVP from 'rsvp';
 
 export default Component.extend({
   gameApi: service(),
+  gameSocket: service(),
+  session: service(),
   flashMessages: service(),
   tagName: '',
   attributeString: null,
