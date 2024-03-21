@@ -1,5 +1,6 @@
 <div id="tlr_chargen_sheet" class="tab-pane fade">
 
+<p>Select your attributes from one of the six sets of options below.</p>
     <select onchange={{action (mut this.attributeString) value="attributeoptions"}}>
       {{#each this.attributeoptions as |attributeoption|}}
         <option value={{attributeoption}}>{{attributeoption}}</option>

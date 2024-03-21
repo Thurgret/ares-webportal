@@ -1,6 +1,8 @@
 import Component from '@ember/component';
 
 export default Component.extend({
+  gameApi: service(),
+  flashMessages: service(),
   tagName: '',
   attributeString: null,
   
