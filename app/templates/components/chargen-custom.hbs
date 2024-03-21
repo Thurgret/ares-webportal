@@ -1,6 +1,6 @@
 <div id="tlr_chargen_sheet" class="tab-pane fade">
 
-    <select onchange={{action (mut this.attributeString) value="attributeoption"}}>
+    <select onchange={{action (mut this.attributeString) value="attributeoptions"}}>
       {{#each this.attributeoptions as |attributeoption|}}
         <option value={{attributeoption}}>{{attributeoption}}</option>
       {{/each}}
