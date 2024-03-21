@@ -1,6 +1,6 @@
 <div id="tlr_chargen_sheet" class="tab-pane fade">
 
-<p>Select your attributes from one of the six sets of options below.</p>
+<p>Select your character's attributes from one of the six sets of options below. If you have selected your character's culture for the first time or have just changed it, please refresh the page before proceeding.</p>
     <select onchange={{action (mut this.attributeString) value="target.value"}}>
       {{#each this.char.custom.attribute_options as |attributeoption|}}
         <option value={{attributeoption}} selected={{eq this.attributeString attributeoption}}>{{attributeoption}}</option>
