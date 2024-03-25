@@ -8,6 +8,7 @@ export default Component.extend({
   attributeString: null,
   firstCombatProficiencyString: null,
   secondCombatProficiencyString: null,
+  culturalFavouredSkillString: null,
   
   didInsertElement: function() {
     this._super(...arguments);
@@ -19,12 +20,14 @@ export default Component.extend({
     this.char.custom.attributeoption = this.attributeString;
     this.char.custom.firstWeaponProficiency = this.firstCombatProficiencyString;
     this.char.custom.secondWeaponProficiency = this.secondCombatProficiencyString;
+    this.char.custom.cultural_favoured_skill_selection = this.culturalFavouredSkillString;
 
     return {
 
       attributeoption: this.get('char.custom.attributeoption'),
       first_weapon_proficiency: this.get('char.custom.firstWeaponProficiency'),
-      second_weapon_proficiency: this.get('char.custom.secondWeaponProficiency')
+      second_weapon_proficiency: this.get('char.custom.secondWeaponProficiency'),
+      cultural_favoured_skill_selection: this.get('char.custom.cultural_favoured_skill_selection')
 
     }
     // Return a hash containing your data.  Character data will be in 'char'.  For example:
