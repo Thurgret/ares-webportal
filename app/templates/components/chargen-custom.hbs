@@ -24,6 +24,14 @@
     </select>
 
 
+    <p>Select a favoured skill, available based on your culture. If you want to update favoured skill choices later in character creation, please select all three favoured skills.</p>
+    <select onchange={{action (mut this.culturalFavouredSkillString) value="target.value"}}>
+      {{#each this.char.custom.cultural_favoured_skills_list as |favouredskill|}}
+        <option value={{favouredskill}} selected={{eq this.culturalFavouredSkillString favouredskill}}>{{favouredskill}}</option>
+      {{/each}}
+    </select>
+
+
 
 
 <p>This is a preview of your character sheet. You will need to refresh the page to see any changes reflected.</p>
