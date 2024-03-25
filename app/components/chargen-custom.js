@@ -9,6 +9,8 @@ export default Component.extend({
   firstCombatProficiencyString: null,
   secondCombatProficiencyString: null,
   culturalFavouredSkillString: null,
+  callingFavouredSkillFirstString: null,
+  callingFavouredSkillSecondString: null,
   
   didInsertElement: function() {
     this._super(...arguments);
@@ -21,6 +23,8 @@ export default Component.extend({
     this.char.custom.firstWeaponProficiency = this.firstCombatProficiencyString;
     this.char.custom.secondWeaponProficiency = this.secondCombatProficiencyString;
     this.char.custom.cultural_favoured_skill_selection = this.culturalFavouredSkillString;
+    this.char.custom.calling_favoured_skill_first_selection = this.callingFavouredSkillFirstString;
+    this.char.custom.calling_favoured_skill_second_selection = this.callingFavouredSkillSecondString;
 
     return {
 
