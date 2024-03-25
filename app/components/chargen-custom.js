@@ -31,7 +31,9 @@ export default Component.extend({
       attributeoption: this.get('char.custom.attributeoption'),
       first_weapon_proficiency: this.get('char.custom.firstWeaponProficiency'),
       second_weapon_proficiency: this.get('char.custom.secondWeaponProficiency'),
-      cultural_favoured_skill_selection: this.get('char.custom.cultural_favoured_skill_selection')
+      cultural_favoured_skill_selection: this.get('char.custom.cultural_favoured_skill_selection'),
+      calling_favoured_skill_first_selection: this.get('char.custom.calling_favoured_skill_first_selection'),
+      calling_favoured_skill_second_selection: this.get('char.custom.calling_favoured_skill_second_selection')
 
     }
     // Return a hash containing your data.  Character data will be in 'char'.  For example:
