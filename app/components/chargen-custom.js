@@ -23,8 +23,8 @@ export default Component.extend({
     return {
 
       attributeoption: this.get('char.custom.attributeoption'),
-      first_weapon_proficiency: this.get(char.custom.firstWeaponProficiency),
-      second_weapon_proficiency: this.get(char.custom.secondWeaponProficiency)
+      first_weapon_proficiency: this.get('char.custom.firstWeaponProficiency'),
+      second_weapon_proficiency: this.get('char.custom.secondWeaponProficiency')
 
     }
     // Return a hash containing your data.  Character data will be in 'char'.  For example:
