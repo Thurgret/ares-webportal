@@ -33,13 +33,13 @@
 
     <p>Select two favoured skills, which are available based on your calling.</p>
     <select onchange={{action (mut this.callingFavouredSkillFirstString) value="target.value"}}>
-      {{#each this.char.custom.calling_favoured_skill_first_selection as |favouredskill|}}
+      {{#each this.char.custom.calling_favoured_skills_list as |favouredskill|}}
         <option value={{favouredskill}} selected={{eq this.callingFavouredSkillFirstString favouredskill}}>{{favouredskill}}</option>
       {{/each}}
     </select>
 
     <select onchange={{action (mut this.callingFavouredSkillSecondString) value="target.value"}}>
-      {{#each this.char.custom.calling_favoured_skill_second_selection as |favouredskill|}}
+      {{#each this.char.custom.calling_favoured_skills_list as |favouredskill|}}
         <option value={{favouredskill}} selected={{eq this.callingFavouredSkillSecondString favouredskill}}>{{favouredskill}}</option>
       {{/each}}
     </select>
