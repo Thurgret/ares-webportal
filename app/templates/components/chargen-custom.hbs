@@ -45,6 +45,20 @@
     </select>
 
 
+    <p>Select two distinctive features, available based on your character's culture.</p>
+    <select onchange={{action (mut this.distinctiveFeatureFirstString) value="target.value"}}>
+      {{#each this.char.custom.cultural_distinctive_features as |distinctivefeature|}}
+        <option value={{distinctivefeature}} selected={{eq this.distinctiveFeatureFirstString distinctivefeature}}>{{distinctivefeature}}</option>
+      {{/each}}
+    </select>
+
+    <select onchange={{action (mut this.distinctiveFeatureSecondString) value="target.value"}}>
+      {{#each this.char.custom.cultural_distinctive_features as |distinctivefeature|}}
+        <option value={{distinctivefeature}} selected={{eq this.distinctiveFeatureSecondString distinctivefeature}}>{{distinctivefeature}}</option>
+      {{/each}}
+    </select>
+
+
 
 
 <p>This is a preview of your character sheet. You will need to refresh the page to see any changes reflected.</p>
