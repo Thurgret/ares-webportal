@@ -12,9 +12,7 @@
     </select>
     <Input @type="text" size={{25}} id="rollString" @enter={{action "addRoll"}} @value={{this.rollString}} />
 
-    <hr>
-    <p>Modifiers: <Input @type="text" size={{2}} id="modifierString" @enter={{action "addRoll"}} @value={{this.modifierString}} />
-    Favoured or Ill-favoured: <Input @type="text" size={{2}} id="favouredString" @enter={{action "addRoll"}} @value={{this.favouredString}} /></p>
+    
    <hr>
     <p><b>Roll for Another PC</b></p>
     
@@ -22,5 +20,13 @@
       Character: <Input @type="text" size={{15}} id="pcRollName" @enter={{action "addRoll"}} @value={{this.pcRollName}} /> 
       Ability: <Input @type="text" size={{15}} id="pcRollSkill" @enter={{action "addRoll"}} @value={{this.pcRollSkill}} /><br>
     </p>
+
+    <hr>
+    <p>The below fields are for various roll modifiers. Leave them blank if they don't apply.</p>
+    <p>Modifiers: <Input @type="text" size={{2}} id="modifierString" @enter={{action "addRoll"}} @value={{this.modifierString}} />
+    Favoured or Ill-favoured: <Input @type="text" size={{2}} id="favouredString" @enter={{action "addRoll"}} @value={{this.favouredString}} /></p>
+    <p>Weary: <Input @type="text" size={{2}} id="wearyString" @enter={{action "addRoll"}} @value={{this.wearyString}} /></p>
+    <p>Miserable: <Input @type="text" size={{2}} id="miserableString" @enter={{action "addRoll"}} @value={{this.miserableString}} /></p>
+    <p>Alternative TN: <Input @type="text" size={{2}} id="alternativeTNString" @enter={{action "addRoll"}} @value={{this.alternativeTNString}} /></p>
           
   </BsModalSimple>

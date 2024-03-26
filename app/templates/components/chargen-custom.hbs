@@ -24,14 +24,14 @@
     </select>
 
 
-    <p>Select a favoured skill, available based on your culture. If you want to update favoured skill choices later in character creation, please select all three favoured skills.</p>
+    <p>Select a favoured skill, available based on your character's culture. If you want to update favoured skill choices later in character creation, please select all three favoured skills.</p>
     <select onchange={{action (mut this.culturalFavouredSkillString) value="target.value"}}>
       {{#each this.char.custom.cultural_favoured_skills_list as |favouredskill|}}
         <option value={{favouredskill}} selected={{eq this.culturalFavouredSkillString favouredskill}}>{{favouredskill}}</option>
       {{/each}}
     </select>
 
-    <p>Select two favoured skills, which are available based on your calling.</p>
+    <p>Select two favoured skills, available based on your character's calling.</p>
     <select onchange={{action (mut this.callingFavouredSkillFirstString) value="target.value"}}>
       {{#each this.char.custom.calling_favoured_skills_list as |favouredskill|}}
         <option value={{favouredskill}} selected={{eq this.callingFavouredSkillFirstString favouredskill}}>{{favouredskill}}</option>

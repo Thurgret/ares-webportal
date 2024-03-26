@@ -12,6 +12,9 @@ export default Component.extend({
   rollString: null,
   modifierString: null,
   favouredString: null,
+  alternativeTNString: null,
+  wearyString: null,
+  miserableString: null,
   destinationType: 'scene',
 
   didInsertElement: function() {
@@ -34,6 +37,9 @@ export default Component.extend({
       let pcRollName = this.pcRollName;
       let modifierString = this.modifierString;
       let favouredString = this.favouredString;
+      let alternativeTNString = this.alternativeTNString;
+      let wearyString = this.wearyString;
+      let miserableString = this.miserableString;
 
       if (favouredString == null){
         favouredString = "n"
@@ -61,6 +67,9 @@ export default Component.extend({
       this.set('pcRollName', null);
       this.set('favouredString', null);
       this.set('modifierString', null);
+      this.set('alternativeTNString', null);
+      this.set('wearyString', null);
+      this.set('miserableString', null);
 
       var destinationId, command;
       if (this.destinationType == 'scene') {
@@ -78,6 +87,9 @@ export default Component.extend({
          pc_skill: pcRollSkill,
          favoured_string: favouredString,
          modifier_string: modifierString,
+         alternative_tn_string: alternativeTNString,
+         weary_string: wearyString,
+         miserable_string: miserableString,
          sender: sender }, null)
       .then( (response) => {
         if (response.error) {
