@@ -7,21 +7,7 @@
       {{/each}}
     </select>
 
-    <p>Select a combat proficiency to start at a rating of 2.</p>
 
-    <select onchange={{action (mut this.firstCombatProficiencyString) value="target.value"}}>
-      {{#each this.char.custom.weapon_proficiencies as |weaponproficiency|}}
-        <option value={{weaponproficiency}} selected={{eq this.firstCombatProficiencyString weaponproficiency}}>{{weaponproficiency}}</option>
-      {{/each}}
-    </select>
-
-    <p>Select a combat proficiency to start at a rating of 1 (please make sure it isn't the same as the first proficiency).</p>
-
-    <select onchange={{action (mut this.secondCombatProficiencyString) value="target.value"}}>
-      {{#each this.char.custom.second_weapon_proficiencies as |weaponproficiency|}}
-        <option value={{weaponproficiency}} selected={{eq this.secondCombatProficiencyString weaponproficiency}}>{{weaponproficiency}}</option>
-      {{/each}}
-    </select>
 
 
     <p>Select a favoured skill, available based on your character's culture. If you want to update favoured skill choices later in character creation, please select all three favoured skills.</p>
@@ -41,6 +27,22 @@
     <select onchange={{action (mut this.callingFavouredSkillSecondString) value="target.value"}}>
       {{#each this.char.custom.calling_favoured_skills_list as |favouredskill|}}
         <option value={{favouredskill}} selected={{eq this.callingFavouredSkillSecondString favouredskill}}>{{favouredskill}}</option>
+      {{/each}}
+    </select>
+
+        <p>Select a combat proficiency to start at a rating of 2. You change one combat proficiency, you will need to change the other too, or it will be set to zero.</p>
+
+    <select onchange={{action (mut this.firstCombatProficiencyString) value="target.value"}}>
+      {{#each this.char.custom.weapon_proficiencies as |weaponproficiency|}}
+        <option value={{weaponproficiency}} selected={{eq this.firstCombatProficiencyString weaponproficiency}}>{{weaponproficiency}}</option>
+      {{/each}}
+    </select>
+
+    <p>Select a combat proficiency to start at a rating of 1 (please make sure it isn't the same as the first proficiency).</p>
+
+    <select onchange={{action (mut this.secondCombatProficiencyString) value="target.value"}}>
+      {{#each this.char.custom.second_weapon_proficiencies as |weaponproficiency|}}
+        <option value={{weaponproficiency}} selected={{eq this.secondCombatProficiencyString weaponproficiency}}>{{weaponproficiency}}</option>
       {{/each}}
     </select>
 
