@@ -125,4 +125,22 @@
     
     Equipment choices can be freely changed after character creation during the Fellowship Phase, that is, non-adventuring downtime. Mail armour is not available to all cultures at the start, while hobbits and dwarves also have certain equipment restrictions.
   </p>
+  <p>Select your armour here.</p>
+  <select onchange={{action (mut this.armourOptionString) value="target.value"}}>
+      {{#each this.char.custom.armour_options as |armouroption|}}
+        <option value={{armouroption}} selected={{eq this.armourOptionString armouroption}}>{{armouroption}}</option>
+      {{/each}}
+    </select>
+    <p>Select a weapon here. You can return to this page or to your character's profile after character creation to add more weapons.</p>
+    <select onchange={{action (mut this.weaponOptionString) value="target.value"}}>
+      {{#each this.char.custom.weapon_options as |weaponoption|}}
+        <option value={{weaponoption}} selected={{eq this.weaponOptionString weaponoption}}>{{weaponoption}}</option>
+      {{/each}}
+    </select>
+    <p>Select a shield here.</p>
+    <select onchange={{action (mut this.shieldOptionString) value="target.value"}}>
+      {{#each this.char.custom.shield_options as |shieldoption|}}
+        <option value={{shieldoption}} selected={{eq this.shieldOptionString shieldoption}}>{{shieldoption}}</option>
+      {{/each}}
+    </select>
 </div>

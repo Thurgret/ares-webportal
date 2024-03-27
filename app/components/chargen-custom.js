@@ -13,6 +13,11 @@ export default Component.extend({
   callingFavouredSkillSecondString: null,
   distinctiveFeatureFirstString: null,
   distinctiveFeatureSecondString: null,
+
+  armourOptionString: null,
+  weaponOptionString: null,
+  shieldOptionString: null,
+
   
   didInsertElement: function() {
     this._super(...arguments);
@@ -30,6 +35,11 @@ export default Component.extend({
     this.char.custom.distinctive_feature_first_selection = this.distinctiveFeatureFirstString;
     this.char.custom.distinctive_feature_second_selection = this.distinctiveFeatureSecondString;
 
+
+    this.char.custom.armour_selection = this.armourOptionString;
+    this.char.custom.weapon_selection = this.weaponOptionString;
+    this.char.custom.shield_selection = this.shieldOptionString;
+
     return {
 
       attributeoption: this.get('char.custom.attributeoption'),
@@ -39,7 +49,10 @@ export default Component.extend({
       calling_favoured_skill_first_selection: this.get('char.custom.calling_favoured_skill_first_selection'),
       calling_favoured_skill_second_selection: this.get('char.custom.calling_favoured_skill_second_selection'),
       distinctive_feature_first_selection: this.get('char.custom.distinctive_feature_first_selection'),
-      distinctive_feature_second_selection: this.get('char.custom.distinctive_feature_second_selection')
+      distinctive_feature_second_selection: this.get('char.custom.distinctive_feature_second_selection'),
+      armour_selection: this.get('char.custom.armour_selection'),
+      weapon_selection: this.get('char.custom.weapon_selection'),
+      shield_selection: this.get('char.custom.shield_selection')
 
 
     };
