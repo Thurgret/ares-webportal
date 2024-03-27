@@ -42,10 +42,9 @@ export default Component.extend({
       distinctive_feature_second_selection: this.get('char.custom.distinctive_feature_second_selection')
 
 
-    }
+    };
     // Return a hash containing your data.  Character data will be in 'char'.  For example:
     // 
     // return { goals: this.get('char.custom.goals') };
-    return {};
   }
 });
