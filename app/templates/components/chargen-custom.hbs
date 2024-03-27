@@ -124,15 +124,16 @@
     You can add new wargear using the dropdown menus below.
     
     Equipment choices can be freely changed after character creation during the Fellowship Phase, that is, non-adventuring downtime. Mail armour is not available to all cultures at the start, while hobbits and dwarves also have certain equipment restrictions.
+    You will see changes reflected on your character's sheet after refreshing the page.
   </p>
   <hr>
-  <p>Select your armour here.</p>
+  <p>Select armour here.</p>
   <select onchange={{action (mut this.armourOptionString) value="target.value"}}>
       {{#each this.char.custom.armour_options as |armouroption|}}
         <option value={{armouroption}} selected={{eq this.armourOptionString armouroption}}>{{armouroption}}</option>
       {{/each}}
     </select>
-    <p>Select a weapon here. You can return to this page or to your character's profile after character creation to add more weapons.</p>
+    <p>Select weapons here.</p>
     <select onchange={{action (mut this.weaponOptionString) value="target.value"}}>
       {{#each this.char.custom.weapon_options as |weaponoption|}}
         <option value={{weaponoption}} selected={{eq this.weaponOptionString weaponoption}}>{{weaponoption}}</option>
