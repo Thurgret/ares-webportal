@@ -144,4 +144,10 @@
         <option value={{shieldoption}} selected={{eq this.shieldOptionString shieldoption}}>{{shieldoption}}</option>
       {{/each}}
     </select>
+    <p>If you want to discard any wargear, you can select it from the below list then save the page.</p>
+    <select onchange={{action (mut this.wargearDiscardString) value="target.value"}}>
+      {{#each this.char.custom.wargear_list as |discardoption|}}
+        <option value={{discardoption}} selected={{eq this.wargearDiscardString discardoption}}>{{discardoption}}</option>
+      {{/each}}
+    </select>
 </div>

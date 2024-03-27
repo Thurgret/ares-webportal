@@ -13,6 +13,7 @@ export default Component.extend({
   callingFavouredSkillSecondString: null,
   distinctiveFeatureFirstString: null,
   distinctiveFeatureSecondString: null,
+  wargearDiscardString: null,
 
   armourOptionString: null,
   weaponOptionString: null,
@@ -34,6 +35,7 @@ export default Component.extend({
     this.char.custom.calling_favoured_skill_second_selection = this.callingFavouredSkillSecondString;
     this.char.custom.distinctive_feature_first_selection = this.distinctiveFeatureFirstString;
     this.char.custom.distinctive_feature_second_selection = this.distinctiveFeatureSecondString;
+    this.char.custom.wargear_discard_selection = this.wargearDiscardString;
 
 
     this.char.custom.armour_selection = this.armourOptionString;
@@ -52,7 +54,8 @@ export default Component.extend({
       distinctive_feature_second_selection: this.get('char.custom.distinctive_feature_second_selection'),
       armour_selection: this.get('char.custom.armour_selection'),
       weapon_selection: this.get('char.custom.weapon_selection'),
-      shield_selection: this.get('char.custom.shield_selection')
+      shield_selection: this.get('char.custom.shield_selection'),
+      wargear_discard_selection: this.get('char.custom.wargear_discard_selection')
 
 
     };
