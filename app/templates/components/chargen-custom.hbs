@@ -60,6 +60,15 @@
       {{/each}}
     </select>
 
+    <hr>
+
+    <p>Select a virtue from the list of common virtues.</p>
+    <select onchange={{action (mut this.virtueString) value="target.value"}}>
+      {{#each this.char.custom.commonVirtues as |virtue|}}
+        <option value={{virtue}} selected={{eq this.virtueString virtue}}>{{virtue}}</option>
+      {{/each}}
+    </select>
+
 
 
 

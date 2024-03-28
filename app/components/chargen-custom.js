@@ -14,6 +14,7 @@ export default Component.extend({
   distinctiveFeatureFirstString: null,
   distinctiveFeatureSecondString: null,
   wargearDiscardString: null,
+  virtueString: null,
 
   armourOptionString: null,
   weaponOptionString: null,
@@ -36,6 +37,7 @@ export default Component.extend({
     this.char.custom.distinctive_feature_first_selection = this.distinctiveFeatureFirstString;
     this.char.custom.distinctive_feature_second_selection = this.distinctiveFeatureSecondString;
     this.char.custom.wargear_discard_selection = this.wargearDiscardString;
+    this.char.custom.virtue_selection = this.virtueString;
 
 
     this.char.custom.armour_selection = this.armourOptionString;
@@ -55,8 +57,8 @@ export default Component.extend({
       armour_selection: this.get('char.custom.armour_selection'),
       weapon_selection: this.get('char.custom.weapon_selection'),
       shield_selection: this.get('char.custom.shield_selection'),
-      wargear_discard_selection: this.get('char.custom.wargear_discard_selection')
-
+      wargear_discard_selection: this.get('char.custom.wargear_discard_selection'),
+      virtue_selection: this.get('char.custom.virtue_selection')
 
     };
     // Return a hash containing your data.  Character data will be in 'char'.  For example:
