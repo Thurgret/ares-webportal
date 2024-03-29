@@ -41,9 +41,6 @@ export default Component.extend({
       let wearyString = this.wearyString;
       let miserableString = this.miserableString;
 
-      if (favouredString == null){
-        favouredString = "n"
-      }
       
       var sender;
       if (this.scene) {

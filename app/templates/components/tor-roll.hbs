@@ -22,11 +22,11 @@
     </p>
 
     <hr>
-    <p>The below fields are for various roll modifiers. Leave them blank if they don't apply.</p>
+    <p>The below fields are for various roll modifiers. Favoured skills and the weary and miserable conditions are automatically accounted for, and only need to be entered manually if they are being overriden for some reason.</p>
     <p>Modifiers: <Input @type="text" size={{2}} id="modifierString" @enter={{action "addRoll"}} @value={{this.modifierString}} />
-    Favoured or Ill-favoured: <Input @type="text" size={{2}} id="favouredString" @enter={{action "addRoll"}} @value={{this.favouredString}} /></p>
-    <p>Weary: <Input @type="text" size={{2}} id="wearyString" @enter={{action "addRoll"}} @value={{this.wearyString}} /></p>
-    <p>Miserable: <Input @type="text" size={{2}} id="miserableString" @enter={{action "addRoll"}} @value={{this.miserableString}} /></p>
+    Favoured or Ill-favoured (F, I or N for neither): <Input @type="text" size={{2}} id="favouredString" @enter={{action "addRoll"}} @value={{this.favouredString}} /></p>
+    <p>Weary (Yes or No): <Input @type="text" size={{2}} id="wearyString" @enter={{action "addRoll"}} @value={{this.wearyString}} /></p>
+    <p>Miserable (Yes or No): <Input @type="text" size={{2}} id="miserableString" @enter={{action "addRoll"}} @value={{this.miserableString}} /></p>
     <p>Alternative TN: <Input @type="text" size={{2}} id="alternativeTNString" @enter={{action "addRoll"}} @value={{this.alternativeTNString}} /></p>
           
   </BsModalSimple>
