@@ -1,0 +1,47 @@
+<div id="tlr_gear" class="tab-pane fade">
+    <p>
+    You can add new wargear using the dropdown menus below.
+    
+    Equipment choices can be freely changed during the Fellowship Phase, that is, non-adventuring downtime. Mail armour is available based on standard of living, while hobbits and dwarves also have certain equipment restrictions.
+    You will see changes reflected on your character's sheet after refreshing the page.
+  </p>
+  <hr>
+  <p>Select armour here.</p>
+  <select onchange={{action (mut this.armourOptionString) value="target.value"}}>
+      {{#each this.char.custom.armour_options as |armouroption|}}
+        <option value={{armouroption}} selected={{eq this.armourOptionString armouroption}}>{{armouroption}}</option>
+      {{/each}}
+    </select>
+    <p>Select weapons here.</p>
+    <select onchange={{action (mut this.weaponOptionString) value="target.value"}}>
+      {{#each this.char.custom.weapon_options as |weaponoption|}}
+        <option value={{weaponoption}} selected={{eq this.weaponOptionString weaponoption}}>{{weaponoption}}</option>
+      {{/each}}
+    </select>
+    <p>Select a shield here.</p>
+    <select onchange={{action (mut this.shieldOptionString) value="target.value"}}>
+      {{#each this.char.custom.shield_options as |shieldoption|}}
+        <option value={{shieldoption}} selected={{eq this.shieldOptionString shieldoption}}>{{shieldoption}}</option>
+      {{/each}}
+    </select>
+    <p>If you want to discard any wargear, you can select it from the below list then save the page.</p>
+    <select onchange={{action (mut this.wargearDiscardString) value="target.value"}}>
+      {{#each this.char.custom.wargear_list as |discardoption|}}
+        <option value={{discardoption}} selected={{eq this.wargearDiscardString discardoption}}>{{discardoption}}</option>
+      {{/each}}
+    </select>
+    <hr>
+    <p>Your character can have one Reward per point of Valour they have, which means one Reward at the start - likely picked at chargen. You can change these during the Fellowship phase, through a request.<br><br>
+    The available Rewards are as follows:<br><br>
+    Close-fitting (armour or helm): When you make a PROTECTION roll while wearing a close-fitting armour or helm you add +2 to the result.<br>
+    Cunning Make (armour, helm or shield): Reduce the Load rating of the selected item by 2 (to a minimum of 0 Load).<br>
+    Fell (weapon): Add 2 to the Injury rating of the selected weapon.<br>
+    Grievous (weapon): Add 1 to the Damage rating of the selected weapon.<br>
+    Keen (weapon): Attack rolls made with a Keen weapon score a Piercing Blow also on a result of 9 on the Feat die.<br>
+    Reinforced (shield): Add 1 to your shield’s Parry bonus.
+    </p>
+
+
+
+
+</div>
