@@ -17,7 +17,7 @@ export default Component.extend({
 
 
 
-    this.char.custom.armour_selection = this.armourOptionString;
+    this.char.custom.current_armour_selection = this.armourOptionString;
     this.char.custom.weapon_selection = this.weaponOptionString;
     this.char.custom.shield_selection = this.shieldOptionString;
     this.char.custom.wargear_discard_selection = this.wargearDiscardString;
@@ -25,7 +25,7 @@ export default Component.extend({
     // 
     // return { goals: this.get('char.custom.goals') };
     return {
-      armour_selection: this.get('char.custom.armour_selection'),
+      current_armour_selection: this.get('char.custom.current_armour_selection'),
       weapon_selection: this.get('char.custom.weapon_selection'),
       shield_selection: this.get('char.custom.shield_selection'),
       wargear_discard_selection: this.get('char.custom.wargear_discard_selection')
