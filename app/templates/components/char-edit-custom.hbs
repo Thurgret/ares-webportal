@@ -7,9 +7,9 @@
   </p>
   <hr>
   <p>Select armour here.</p>
-  <select onchange={{action (mut this.armourOptionString) value="target.value"}}>
+  <select onchange={{action (mut this.currentArmourOptionString) value="target.value"}}>
       {{#each this.char.custom.armour_options as |armouroption|}}
-        <option value={{armouroption}} selected={{eq this.armourOptionString armouroption}}>{{armouroption}}</option>
+        <option value={{armouroption}} selected={{eq this.currentArmourOptionString armouroption}}>{{armouroption}}</option>
       {{/each}}
     </select>
     <p>Select weapons here.</p>

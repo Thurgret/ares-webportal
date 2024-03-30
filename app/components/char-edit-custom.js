@@ -3,7 +3,7 @@ import Component from '@ember/component';
 export default Component.extend({
   tagName: '',
   wargearDiscardString: null,
-  armourOptionString: null,
+  currentArmourOptionString: null,
   weaponOptionString: null,
   shieldOptionString: null,
   
@@ -17,7 +17,7 @@ export default Component.extend({
 
 
 
-    this.char.custom.current_armour_selection = this.armourOptionString;
+    this.char.custom.current_armour_selection = this.currentArmourOptionString;
     this.char.custom.weapon_selection = this.weaponOptionString;
     this.char.custom.shield_selection = this.shieldOptionString;
     this.char.custom.wargear_discard_selection = this.wargearDiscardString;
