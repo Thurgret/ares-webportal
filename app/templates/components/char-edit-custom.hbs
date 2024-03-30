@@ -6,6 +6,7 @@
     You will see changes reflected on your character's sheet after refreshing the page.
   </p>
   <hr>
+  <p>This section is for adding new wargear.</p>
   <p>Select armour here.</p>
   <select onchange={{action (mut this.currentArmourOptionString) value="target.value"}}>
       {{#each this.char.custom.armour_options as |armouroption|}}
@@ -22,6 +23,34 @@
     <select onchange={{action (mut this.shieldOptionString) value="target.value"}}>
       {{#each this.char.custom.shield_options as |shieldoption|}}
         <option value={{shieldoption}} selected={{eq this.shieldOptionString shieldoption}}>{{shieldoption}}</option>
+      {{/each}}
+    </select>
+    <hr>
+    <p>This section is for wearing wargear your character already has, if it has been dropped for any reason.</p>
+    <select onchange={{action (mut this.wargearWearString) value="target.value"}}>
+      {{#each this.char.custom.dropped_equipment as |wearoption|}}
+        <option value={{wearoption}} selected={{eq this.wargearWearString wearoption}}>{{wearoption}}</option>
+      {{/each}}
+    </select>
+    <hr>
+    <p>This section is for dropping wargear that your character is carrying, with the expectation of retrieving it later.</p>
+    <select onchange={{action (mut this.wargearDropString) value="target.value"}}>
+      {{#each this.char.custom.worn_equipment as |dropoption|}}
+        <option value={{dropoption}} selected={{eq this.wargearDropString dropoption}}>{{dropoption}}</option>
+      {{/each}}
+    </select>
+    <hr>
+    <p>This section is for putting weapons or shields 'in hand', rather than just carrying them. If you want to swap weapons, store the currently wielded ones first. If using a weapon which can be used with one or both hands along with a shield, equip the shield first, then the weapon.</p>
+    <select onchange={{action (mut this.wargearWieldString) value="target.value"}}>
+      {{#each this.char.custom.stored_equipment as |wieldoption|}}
+        <option value={{wieldoption}} selected={{eq this.wargearWieldString wieldoption}}>{{wieldoption}}</option>
+      {{/each}}
+    </select>
+    <hr>
+    <p>This section is for storing any currently held weapons or shields that your character has in hand.</p>
+    <select onchange={{action (mut this.wargearStoreString) value="target.value"}}>
+      {{#each this.char.custom.wielded_equipment as |storeoption|}}
+        <option value={{storeoption}} selected={{eq this.wargearStoreString storeoption}}>{{storeoption}}</option>
       {{/each}}
     </select>
     <p>If you want to discard any wargear, you can select it from the below list then save the page.</p>
