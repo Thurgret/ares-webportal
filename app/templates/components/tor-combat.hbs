@@ -1,0 +1,32 @@
+<BsModalSimple @title="Add Ability Roll" @closeTitle="Cancel" @submitTitle="Roll" @size={{null}} @fade={{true}} @open={{this.selectSkillRoll}} @onSubmit={{action "addRoll"}} @onHide={{action (mut this.selectSkillRoll) false}}>
+
+    <p class="hint">Modifiers to rolls should be added in the second row. If a roll is favoured, type F in the favoured box, and if it is ill-favoured, type I.</p>
+    
+
+    <p><b>Regular Roll</b></p>
+    <p>Select an ability, or type one in the box.</p>
+    <select onchange={{action (mut this.rollString) value="target.value"}}>
+      {{#each this.abilities as |ability|}}
+        <option value={{ability}}>{{ability}}</option>
+      {{/each}}
+    </select>
+    <Input @type="text" size={{25}} id="rollString" @enter={{action "addRoll"}} @value={{this.rollString}} />
+
+    
+   <hr>
+    <p><b>Roll for Another PC</b></p>
+    
+    <p>
+      Character: <Input @type="text" size={{15}} id="pcRollName" @enter={{action "addRoll"}} @value={{this.pcRollName}} /> 
+      Ability: <Input @type="text" size={{15}} id="pcRollSkill" @enter={{action "addRoll"}} @value={{this.pcRollSkill}} /><br>
+    </p>
+
+    <hr>
+    <p>The below fields are for various roll modifiers. Favoured skills and the weary and miserable conditions are automatically accounted for, and only need to be entered manually if they are being overriden for some reason.</p>
+    <p>Modifiers: <Input @type="text" size={{2}} id="modifierString" @enter={{action "addRoll"}} @value={{this.modifierString}} />
+    Favoured or Ill-favoured (F, I or N for neither): <Input @type="text" size={{2}} id="favouredString" @enter={{action "addRoll"}} @value={{this.favouredString}} /></p>
+    <p>Weary (Yes or No): <Input @type="text" size={{2}} id="wearyString" @enter={{action "addRoll"}} @value={{this.wearyString}} /></p>
+    <p>Miserable (Yes or No): <Input @type="text" size={{2}} id="miserableString" @enter={{action "addRoll"}} @value={{this.miserableString}} /></p>
+    <p>Alternative TN: <Input @type="text" size={{2}} id="alternativeTNString" @enter={{action "addRoll"}} @value={{this.alternativeTNString}} /></p>
+          
+  </BsModalSimple>
