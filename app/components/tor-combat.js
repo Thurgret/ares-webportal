@@ -20,7 +20,7 @@ export default Component.extend({
   didInsertElement: function() {
     this._super(...arguments);
     let defaultAdversary = this.toradversaries ? this.toradversaries[0] : '';
-    this.set('rollString', defaultAdversary);
+    this.set('targetAdversaryString', defaultAdversary);
   },
 
 
@@ -47,17 +47,17 @@ export default Component.extend({
         sender = this.get('scene.poseChar.name');
       }
         
-      if (!rollString && !pcRollSkill) {
-        this.flashMessages.danger("You haven't selected an ability to roll.");
-        return;
-      }
+   //   if (! && !pcRollSkill) {
+     //   this.flashMessages.danger("You haven't selected an ability to roll.");
+       // return;
+     // }
     
-      if (pcRollSkill || pcRollName) {
-        if (!pcRollSkill || !pcRollName) {
-          this.flashMessages.danger("You have to provide all skill information to roll for a PC.");
-          return;
-        }
-      }
+//      if (pcRollSkill || pcRollName) {
+  //      if (!pcRollSkill || !pcRollName) {
+    //      this.flashMessages.danger("You have to provide all skill information to roll for a PC.");
+      //    return;
+  //      }
+    //  }
       this.set('selectSkillRoll', false);
       this.set('targetAdversaryString', null);
       this.set('pcRollSkill', null);
