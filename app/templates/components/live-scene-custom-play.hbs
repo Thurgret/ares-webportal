@@ -1,5 +1,5 @@
 <li><a href="#" {{action (mut this.selectSkillRoll) true}} class="dropdown-item">Roll Ability</a></li>
-<TorRoll @scene={{this.scene}} @destinationType="scene" @abilities={{this.torabilities}} @selectSkillRoll={{this.selectSkillRoll}} />
+<TorRoll @scene={{this.scene}} @destinationType="scene" @abilities={{this.abilities}} @selectSkillRoll={{this.selectSkillRoll}} />
 
 <li><a href="#" {{action (mut this.selectCombatRoll) true}} class="dropdown-item">Combat Rolls</a></li>
-<TorCombat @scene={{this.scene}} @destinationType="scene" @abilities={{this.torcombatabilities}} @selectCombatRoll={{this.selectCombatRoll}} />
+<TorCombat @scene={{this.scene}} @destinationType="scene" @abilities={{this.combatabilities}} @selectRoll={{this.selectSkillRoll}} />
