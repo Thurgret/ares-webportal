@@ -1,12 +1,12 @@
 <BsModalSimple @title="Add Combat Roll" @closeTitle="Cancel" @submitTitle="Roll" @size={{null}} @fade={{true}} @open={{this.selectCombatRoll}} @onSubmit={{action "addCombatRoll"}} @onHide={{action (mut this.selectCombatRoll) false}}>
 
-    <p class="hint">Modifiers to rolls should be added in the second row. If a roll is favoured, type F in the favoured box, and if it is ill-favoured, type I.</p>
+    <p class="hint">This works as regular skill rolls do, by and large, but automatically calculates adversary statistics, and can also be used to roll for an adversary.</p>
     
 
     <p><b>Regular Roll</b></p>
     <p>Select an ability, or type one in the box.</p>
     <select onchange={{action (mut this.rollString) value="target.value"}}>
-      {{#each this.abilities as |ability|}}
+      {{#each this.torabilities as |ability|}}
         <option value={{ability}}>{{ability}}</option>
       {{/each}}
     </select>
