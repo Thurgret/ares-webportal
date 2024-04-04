@@ -6,7 +6,7 @@
     <p><b>Regular Roll</b></p>
     <p>Select an ability, or type one in the box.</p>
     <select onchange={{action (mut this.rollString) value="target.value"}}>
-      {{#each this.custom.torcombatabilities as |ability|}}
+      {{#each this.torcombatabilities as |ability|}}
         <option value={{ability}}>{{ability}}</option>
       {{/each}}
     </select>
