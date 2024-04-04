@@ -9,7 +9,7 @@ export default Component.extend({
   selectSkillRoll: false,
   pcRollSkill: null,
   pcRollName: null,
-  rollString: null,
+  targetAdversaryString: null,
   modifierString: null,
   favouredString: null,
   alternativeTNString: null,
@@ -32,7 +32,7 @@ export default Component.extend({
     
       // Needed because the onChange event doesn't get triggered when the list is 
       // first loaded, so the roll string is empty.
-      let rollString = this.rollString || defaultAdversary;
+      let targetAdversaryString = this.targetAdversaryString || defaultAdversary;
       let pcRollSkill = this.pcRollSkill;
       let pcRollName = this.pcRollName;
       let modifierString = this.modifierString;
@@ -59,7 +59,7 @@ export default Component.extend({
         }
       }
       this.set('selectSkillRoll', false);
-      this.set('rollString', null);
+      this.set('targetAdversaryString', null);
       this.set('pcRollSkill', null);
       this.set('pcRollName', null);
       this.set('favouredString', null);
@@ -79,7 +79,7 @@ export default Component.extend({
       }
       
       api.requestOne(command, { id: destinationId,
-         roll_string: rollString,
+         target_adversary: targetAdversaryString,
          pc_name: pcRollName,
          pc_skill: pcRollSkill,
          favoured_string: favouredString,
