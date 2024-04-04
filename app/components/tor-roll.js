@@ -19,7 +19,7 @@ export default Component.extend({
 
   didInsertElement: function() {
     this._super(...arguments);
-    let defaultAbility = this.abilities ? this.abilities[0] : '';
+    let defaultAbility = this.torabilities ? this.torabilities[0] : '';
     this.set('rollString', defaultAbility);
   },
 
@@ -28,7 +28,7 @@ export default Component.extend({
     
     addRoll() {
       let api = this.gameApi;
-      let defaultAbility = this.abilities ? this.abilities[0] : '';
+      let defaultAbility = this.torabilities ? this.torabilities[0] : '';
     
       // Needed because the onChange event doesn't get triggered when the list is 
       // first loaded, so the roll string is empty.
