@@ -20,7 +20,7 @@ export default Component.extend({
   didInsertElement: function() {
     this._super(...arguments);
     let defaultAdversary = this.toradversaries ? this.toradversaries[0] : '';
-    this.set('rollString', defaultAbility);
+    this.set('rollString', defaultAdversary);
   },
 
 
@@ -28,11 +28,11 @@ export default Component.extend({
     
     addCombatRoll() {
       let api = this.gameApi;
-      let defaultAbility = this.toradversaries ? this.toradversaries[0] : '';
+      let defaultAdversary = this.toradversaries ? this.toradversaries[0] : '';
     
       // Needed because the onChange event doesn't get triggered when the list is 
       // first loaded, so the roll string is empty.
-      let rollString = this.rollString || defaultAbility;
+      let rollString = this.rollString || defaultAdversary;
       let pcRollSkill = this.pcRollSkill;
       let pcRollName = this.pcRollName;
       let modifierString = this.modifierString;
