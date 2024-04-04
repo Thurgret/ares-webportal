@@ -26,7 +26,7 @@ export default Component.extend({
 
   actions: { 
     
-    addRoll() {
+    addCombatRoll() {
       let api = this.gameApi;
       let defaultAbility = this.abilities ? this.abilities[0] : '';
     
