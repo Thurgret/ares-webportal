@@ -31,7 +31,7 @@ export default Component.extend({
       // Needed because the onChange event doesn't get triggered when the list is 
       // first loaded, so the roll string is empty.
       let adversaryAttackString = this.adversaryAttackString || defaultAdversaryRoll;
-      let pcRollName = this.pcRollName;
+      let pcTargetName = this.pcTargetName;
       let modifierString = this.modifierString;
       let favouredString = this.favouredString;
       let alternativeTNString = this.alternativeTNString;
