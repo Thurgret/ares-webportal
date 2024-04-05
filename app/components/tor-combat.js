@@ -40,6 +40,7 @@ export default Component.extend({
       let alternativeTNString = this.alternativeTNString;
       let wearyString = this.wearyString;
       let miserableString = this.miserableString;
+      let adversaryAttackString = this.adversaryAttackString;
 
       
       var sender;
@@ -67,6 +68,7 @@ export default Component.extend({
       this.set('alternativeTNString', null);
       this.set('wearyString', null);
       this.set('miserableString', null);
+      this.set('adversaryAttackString', null);
 
       var destinationId, command;
       if (this.destinationType == 'scene') {
@@ -87,6 +89,7 @@ export default Component.extend({
          alternative_tn_string: alternativeTNString,
          weary_string: wearyString,
          miserable_string: miserableString,
+         adversary_attack_string: adversaryAttackString,
          sender: sender }, null)
       .then( (response) => {
         if (response.error) {
