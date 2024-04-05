@@ -58,7 +58,7 @@ export default Component.extend({
       //    return;
   //      }
     //  }
-      this.set('selectSkillRoll', false);
+      this.set('selectCombatRoll', false);
       this.set('targetAdversaryString', null);
       this.set('pcRollSkill', null);
       this.set('pcRollName', null);
