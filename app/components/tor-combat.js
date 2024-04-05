@@ -71,7 +71,7 @@ export default Component.extend({
       var destinationId, command;
       if (this.destinationType == 'scene') {
         destinationId = this.get('scene.id');
-        command = 'addSceneRoll';
+        command = 'addCombatRoll';
       }
       else {
         destinationId = this.get('job.id');
