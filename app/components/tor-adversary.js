@@ -24,7 +24,7 @@ export default Component.extend({
 
   actions: { 
     
-    addCombatRoll() {
+    addAdversaryRoll() {
       let api = this.gameApi;
       let defaultAdversaryRoll = this.toradversaryattacks ? this.toradversaryattacks[0] : '';
     
@@ -67,7 +67,7 @@ export default Component.extend({
       var destinationId, command;
       if (this.destinationType == 'scene') {
         destinationId = this.get('scene.id');
-        command = 'addCombatRoll';
+        command = 'addAdversaryRoll';
       }
       else {
         destinationId = this.get('job.id');
