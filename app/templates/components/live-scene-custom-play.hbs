@@ -4,7 +4,7 @@
 <li><a href="#" {{action (mut this.selectCombatRoll) true}} class="dropdown-item">Combat Rolls</a></li>
 <TorCombat @scene={{this.scene}} @destinationType="scene" @toradversaries={{this.custom.toradversaries}} @selectCombatRoll={{this.selectCombatRoll}} />
 
-<li><a href="#" {{action (mut this.selectCombatRoll) true}} class="dropdown-item">Adversary Rolls</a></li>
+<li><a href="#" {{action (mut this.selectAdversaryRoll) true}} class="dropdown-item">Adversary Rolls</a></li>
 <TorAdversary @scene={{this.scene}} @destinationType="scene" @toradversaryattacks={{this.custom.toradversaryattacks}} @selectCombatRoll={{this.selectAdversaryRoll}} />
 
 
