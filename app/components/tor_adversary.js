@@ -6,10 +6,8 @@ export default Component.extend({
   gameApi: service(),
   flashMessages: service(),
   tagName: '',
-  selectSkillRoll: false,
-  pcRollSkill: null,
-  pcRollName: null,
-  targetAdversaryString: null,
+  selectAdversaryRoll: false,
+  pcTargetName: null,
   modifierString: null,
   favouredString: null,
   alternativeTNString: null,
@@ -28,12 +26,11 @@ export default Component.extend({
     
     addCombatRoll() {
       let api = this.gameApi;
-      let defaultAdversary = this.toradversaries ? this.toradversaries[0] : '';
+      let defaultAdversaryRoll = this.toradversaryattacks ? this.toradversaryattacks[0] : '';
     
       // Needed because the onChange event doesn't get triggered when the list is 
       // first loaded, so the roll string is empty.
-      let targetAdversaryString = this.targetAdversaryString || defaultAdversary;
-      let pcRollSkill = this.pcRollSkill;
+      let adversaryAttackString = this.adversaryAttackString || defaultAdversaryRoll;
       let pcRollName = this.pcRollName;
       let modifierString = this.modifierString;
       let favouredString = this.favouredString;
@@ -58,15 +55,14 @@ export default Component.extend({
       //    return;
   //      }
     //  }
-      this.set('selectCombatRoll', false);
-      this.set('targetAdversaryString', null);
-      this.set('pcRollSkill', null);
-      this.set('pcRollName', null);
+      this.set('selectAdversaryRoll', false);
+      this.set('pcTargetName', null);
       this.set('favouredString', null);
       this.set('modifierString', null);
       this.set('alternativeTNString', null);
       this.set('wearyString', null);
       this.set('miserableString', null);
+      this.set('adversaryAttackString', null);
 
       var destinationId, command;
       if (this.destinationType == 'scene') {
@@ -79,9 +75,8 @@ export default Component.extend({
       }
       
       api.requestOne(command, { id: destinationId,
-         target_adversary: targetAdversaryString,
-         pc_name: pcRollName,
-         pc_skill: pcRollSkill,
+         adversary_attack_string: adversaryAttackString,
+         pc_target_name: pcTargetName,
          favoured_string: favouredString,
          modifier_string: modifierString,
          alternative_tn_string: alternativeTNString,

@@ -1,0 +1,19 @@
+<BsModalSimple @title="Add Adversary Roll" @closeTitle="Cancel" @submitTitle="Roll" @size={{null}} @fade={{true}} @open={{this.selectAdversaryRoll}} @onSubmit={{action "addAdversaryRoll"}} @onHide={{action (mut this.selectAdversaryRoll) false}}>
+
+    
+    <p>This section is for adversaries attacking player characters. Select the adversary and the character who is being attacked.</p>
+    <select onchange={{action (mut this.adversaryAttackString) value="target.value"}}>
+      {{#each this.toradversaryattacks as |adversary|}}
+        <option value={{adversary}}>{{adversary}}</option>
+      {{/each}}
+    </select>
+    <Input @type="text" size={{15}} id="pcTargetName" @enter={{action "addAdversaryRoll"}} @value={{this.pcTargetName}} /> 
+
+
+    <hr>
+    <p>The below fields are for various roll modifiers. Favoured skills and the weary and miserable conditions are automatically accounted for, and only need to be entered manually if they are being overriden for some reason.</p>
+    <p>Modifiers (to success dice - change TN for other numerical modifiers): <Input @type="text" size={{2}} id="modifierString" @enter={{action "addAdversaryRoll"}} @value={{this.modifierString}} />
+    Favoured or Ill-favoured (F, I or N for neither): <Input @type="text" size={{2}} id="favouredString" @enter={{action "addAdversaryRoll"}} @value={{this.favouredString}} /></p>
+    <p>Weary (Yes or No): <Input @type="text" size={{2}} id="wearyString" @enter={{action "addAdversaryRoll"}} @value={{this.wearyString}} /></p>
+    <p>Miserable (Yes or No): <Input @type="text" size={{2}} id="miserableString" @enter={{action "addAdversaryRoll"}} @value={{this.miserableString}} /></p>
+    <p>Alternative TN: <Input @type="text" size={{2}} id="alternativeTNString" @enter={{action "addAdversaryRoll"}} @value={{this.alternativeTNString}} /></p>

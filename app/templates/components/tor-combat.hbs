@@ -27,13 +27,6 @@
     <p>Miserable (Yes or No): <Input @type="text" size={{2}} id="miserableString" @enter={{action "addCombatRoll"}} @value={{this.miserableString}} /></p>
     <p>Alternative TN: <Input @type="text" size={{2}} id="alternativeTNString" @enter={{action "addCombatRoll"}} @value={{this.alternativeTNString}} /></p>
 
-    <hr>
-    <p>This section is for adversaries attacking player characters. Select the adversary, the weapon to use, and the character who is being attacked.</p>
-    <select onchange={{action (mut this.adversaryAttackString) value="target.value"}}>
-      {{#each this.toradversaryattacks as |adversary|}}
-        <option value={{adversary}}>{{adversary}}</option>
-      {{/each}}
-    </select>
 
           
   </BsModalSimple>

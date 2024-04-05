@@ -4,4 +4,5 @@ export default Component.extend({
   tagName: '',
   selectSkillRoll: false,
   selectCombatRoll: false,
+  selectAdversaryRoll: false,
 });
